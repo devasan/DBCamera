@@ -334,7 +334,7 @@ static const CGSize kFilterCellSize = { 75, 90 };
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setBackgroundColor:[UIColor clearColor]];
     [button setTitleColor:self.tintColor forState:UIControlStateNormal];
-    button.titleLabel.font = [UIFont systemFontOfSize:12];
+    button.titleLabel.font = [UIFont systemFontOfSize:14];
     
     return button;
 }

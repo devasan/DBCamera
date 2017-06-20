@@ -27,7 +27,7 @@ static const NSUInteger kBorderWidth = 1;
         [backgroundCellView setBackgroundColor:[UIColor blackColor]];
         
         _label = [[UILabel alloc] initWithFrame:CGRectMake(0, self.frame.size.height-kLabelHeight, self.frame.size.width, kLabelHeight-kCellPadding)];
-        [_label setFont:[UIFont systemFontOfSize:9]];
+        [_label setFont:[UIFont systemFontOfSize:12]];
         [_label setTextAlignment:NSTextAlignmentCenter];
         [_label setTextColor:[UIColor whiteColor]];
         [_label setBackgroundColor:[UIColor clearColor]];

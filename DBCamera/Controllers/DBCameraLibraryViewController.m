@@ -277,7 +277,7 @@
         _titleLabel = [[UILabel alloc] initWithFrame:(CGRect){ CGRectGetMaxX(closeButton.frame), 0, CGRectGetWidth(self.view.bounds) - (CGRectGetWidth(closeButton.bounds) * 2), CGRectGetHeight(_topContainerBar.bounds) }];
         [_titleLabel setBackgroundColor:[UIColor clearColor]];
         [_titleLabel setTextColor:self.tintColor];
-        [_titleLabel setFont:[UIFont systemFontOfSize:12]];
+        [_titleLabel setFont:[UIFont systemFontOfSize:14]];
         [_titleLabel setTextAlignment:NSTextAlignmentCenter];
         [_topContainerBar addSubview:_titleLabel];
     }
