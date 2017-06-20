@@ -380,7 +380,7 @@
         }];
     } else {
         dispatch_async(dispatch_get_main_queue(), ^{
-            [[[UIAlertView alloc] initWithTitle:DBCameraLocalizedStrings(@"general.error.title") message:DBCameraLocalizedStrings(@"pickerimage.nopolicy") delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil] show];
+            [[[UIAlertView alloc] initWithTitle:/*DBCameraLocalizedStrings(@"general.error.title")*/@"提示" message:/*DBCameraLocalizedStrings(@"pickerimage.nopolicy")*/@"需要授权才能使用摄像头，请检查你的权限设置： 设置 > 隐私 > 相机" delegate:nil cancelButtonTitle:/*@"Ok"*/@"好" otherButtonTitles:nil, nil] show];
         });
     }
 }
@@ -399,9 +399,9 @@
 
         if (status == AVAuthorizationStatusDenied || status == AVAuthorizationStatusRestricted) {
             [[[UIAlertView alloc] initWithTitle:DBCameraLocalizedStrings(@"general.error.title")
-                                        message:DBCameraLocalizedStrings(@"cameraimage.nopolicy")
+                                        message:/*DBCameraLocalizedStrings(@"cameraimage.nopolicy")*/@"需要授权才能使用摄像头，请检查你的权限设置： 设置 > 隐私 > 相机"
                                        delegate:nil
-                              cancelButtonTitle:@"Ok"
+                              cancelButtonTitle:/*@"Ok"*/@"好"
                               otherButtonTitles:nil, nil] show];
 
             return;

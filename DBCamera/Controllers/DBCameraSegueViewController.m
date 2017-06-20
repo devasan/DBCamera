@@ -167,7 +167,7 @@ static const CGSize kFilterCellSize = { 75, 90 };
 
 - (void) openActionsheet:(UIButton *)button
 {
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:DBCameraLocalizedStrings(@"general.button.cancel") destructiveButtonTitle:nil otherButtonTitles:DBCameraLocalizedStrings(@"cropmode.square"), @"3:2", @"4:3", @"5:3", @"16:9", nil];
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:/*DBCameraLocalizedStrings(@"general.button.cancel")*/@"取消" destructiveButtonTitle:nil otherButtonTitles:/*DBCameraLocalizedStrings(@"cropmode.square")*/@"正方形", @"3:2", @"4:3", @"5:3", @"16:9", nil];
     [actionSheet showInView:self.view];
 }
 
@@ -278,7 +278,7 @@ static const CGSize kFilterCellSize = { 75, 90 };
             UIButton *actionsheetButton = [UIButton buttonWithType:UIButtonTypeCustom];
             [actionsheetButton setFrame:_bottomBar.bounds];
             [actionsheetButton setBackgroundColor:[UIColor clearColor]];
-            [actionsheetButton setTitle:DBCameraLocalizedStrings(@"cropmode.title") forState:UIControlStateNormal];
+            [actionsheetButton setTitle:/*DBCameraLocalizedStrings(@"cropmode.title")*/@"比例" forState:UIControlStateNormal];
             [actionsheetButton addTarget:self action:@selector(openActionsheet:) forControlEvents:UIControlEventTouchUpInside];
             [_bottomBar addSubview:actionsheetButton];
         }
@@ -291,7 +291,7 @@ static const CGSize kFilterCellSize = { 75, 90 };
 {
     if ( !_useButton ) {
         _useButton = [self baseButton];
-        [_useButton setTitle:[DBCameraLocalizedStrings(@"button.use") uppercaseString] forState:UIControlStateNormal];
+        [_useButton setTitle:/*[DBCameraLocalizedStrings(@"button.use") uppercaseString] */@"使用"forState:UIControlStateNormal];
         [_useButton.titleLabel sizeToFit];
         [_useButton sizeToFit];
         [_useButton setFrame:(CGRect){ CGRectGetWidth(self.view.frame) - (CGRectGetWidth(_useButton.frame) + buttonMargin), 0, CGRectGetWidth(_useButton.frame) + buttonMargin, 60 }];
@@ -305,7 +305,7 @@ static const CGSize kFilterCellSize = { 75, 90 };
 {
     if ( !_retakeButton ) {
         _retakeButton = [self baseButton];
-        [_retakeButton setTitle:[DBCameraLocalizedStrings(@"button.retake") uppercaseString] forState:UIControlStateNormal];
+        [_retakeButton setTitle:/*[DBCameraLocalizedStrings(@"button.retake") uppercaseString] */@"重选"forState:UIControlStateNormal];
         [_retakeButton.titleLabel sizeToFit];
         [_retakeButton sizeToFit];
         [_retakeButton setFrame:(CGRect){ 0, 0, CGRectGetWidth(_retakeButton.frame) + buttonMargin, 60 }];

@@ -413,11 +413,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9AB597CC189BAF9A001BCAD3 /* Build configuration list for PBXNativeTarget "DBCamera" */;
 			buildPhases = (
-				94C7FA8D31CF40F5BA4556C8 /* Check Pods Manifest.lock */,
+				94C7FA8D31CF40F5BA4556C8 /* [CP] Check Pods Manifest.lock */,
 				9AB5979C189BAF9A001BCAD3 /* Sources */,
 				9AB5979D189BAF9A001BCAD3 /* Frameworks */,
 				9AB5979E189BAF9A001BCAD3 /* Resources */,
-				E9BB28F5DC0B461A8AA01285 /* Copy Pods Resources */,
+				E9BB28F5DC0B461A8AA01285 /* [CP] Copy Pods Resources */,
+				CEF53BEFAE6431E60B4C3B85 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -488,14 +489,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		94C7FA8D31CF40F5BA4556C8 /* Check Pods Manifest.lock */ = {
+		94C7FA8D31CF40F5BA4556C8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,14 +504,29 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		E9BB28F5DC0B461A8AA01285 /* Copy Pods Resources */ = {
+		CEF53BEFAE6431E60B4C3B85 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DBCamera/Pods-DBCamera-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9BB28F5DC0B461A8AA01285 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

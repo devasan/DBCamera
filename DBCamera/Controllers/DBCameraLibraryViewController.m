@@ -196,10 +196,10 @@
                 }];
             } else {
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [[[UIAlertView alloc] initWithTitle:DBCameraLocalizedStrings(@"general.error.title")
-                                                message:DBCameraLocalizedStrings(@"pickerimage.nophoto")
+                    [[[UIAlertView alloc] initWithTitle:/*DBCameraLocalizedStrings(@"general.error.title")*/@"提示"
+                                                message:/*DBCameraLocalizedStrings(@"pickerimage.nophoto")*/@"你的相册里没有照片"
                                                delegate:nil
-                                      cancelButtonTitle:@"Ok"
+                                      cancelButtonTitle:/*@""*/@"好"
                                       otherButtonTitles:nil, nil] show];
                 });
             }
